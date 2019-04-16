@@ -18,9 +18,11 @@ class WC_Recreate_Orders_Indexes {
 	public static function init() {
 		add_action( 'init', array( __CLASS__, 'load_plugin_textdomain' ) );
 
-		if ( class_exists( 'WooCommerce' ) ) {
+		if ( class_exists( 'WooCommerce' ) && defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.6.0', '>=' ) ) {
 			add_filter( 'woocommerce_debug_tools', array( __CLASS__, 'register_debug_tool' ) );
 			add_action( 'wc_recreate_order_indexes', array( __CLASS__, 'create_order_indexes' ) );
+		} else {
+			add_action( 'admin_notices', array( __CLASS__, 'missing_dependency' ) );
 		}
 	}
 
@@ -135,5 +137,12 @@ class WC_Recreate_Orders_Indexes {
 				$order->save();
 			}
 		}
+	}
+
+	/**
+	 * Missing dependency notice.
+	 */
+	public static function missing_dependency() {
+		echo '<div class="error"><p>' . wp_kses_post( __( '<strong>WooCommerce Recreate Orders Indexes</strong> requires WooCoomerce 3.6 or later to work!', 'woocommerce-recreate-orders-indexes' ) ) . '</p></div>';
 	}
 }
