@@ -15,7 +15,7 @@
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="woocommerce-recreate-order-indexes" />
+			<property name="text_domain" type="array" value="woocommerce-recreate-orders-indexes" />
 		</properties>
 	</rule>
 </ruleset>

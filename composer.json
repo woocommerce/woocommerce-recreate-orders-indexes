@@ -1,6 +1,6 @@
 {
-  "name": "woocommerce/woocommerce-recreate-order-indexes",
-  "description": "Recreate WooCommerce orders indexes.",
+  "name": "woocommerce/woocommerce-recreate-orders-indexes",
+  "description": "Recreate WooCommerce Orders Indexes.",
   "homepage": "https://woocommerce.com/",
   "type": "wordpress-plugin",
   "license": "GPL-3.0-or-later",

@@ -1,11 +1,11 @@
 {
-  "name": "woocommerce-recreate-order-indexes",
-  "title": "Recreate WooCommerce orders indexes",
+  "name": "woocommerce-recreate-orders-indexes",
+  "title": "Recreate WooCommerce Orders Indexes",
   "version": "1.0.0",
   "homepage": "https://woocommerce.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/woocommerce/woocommerce-recreate-order-indexes.git"
+    "url": "https://github.com/woocommerce/woocommerce-recreate-orders-indexes.git"
   },
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",
