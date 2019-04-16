@@ -8,6 +8,8 @@
  * Author URI: https://woocommerce.com
  * Text Domain: woocommerce-recreate-orders-indexes
  * Domain Path: /i18n/languages/
+ * WC requires at least: 3.6.0
+ * WC tested up to: 3.6.0
  *
  * @package WooCommerce\Recreate\Order\Indexes
  */
